@@ -72,7 +72,7 @@ def mainMethod(host):
 We need to look into implementing a massive loop to parse through all of the nodes on the network and implement them into the mainMethod(IP).
 '''
 
-host = ['10.10.10.10', '10.10.10.11', '10.31.252.12']
+host = ['10.10.10.10', '10.10.10.11', '10.10.10.12']
 if __name__=='__main__':
     for i in range(len(host)):
         mainMethod(host[i])
