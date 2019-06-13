@@ -38,14 +38,13 @@ def getInterfaceNames(remoteConnect):
 # This will apply the change based on the interfaces in the output field. 
 def convertInterfaceToVlan(listOfInterfaces, remoteConnect):
     remoteConnect.send('\n')
+    remoteConnect.send('config t\n')
     for i in range(len(listOfInterfaces)):
-        remoteConnect.send('config t\n')
         print("Sending ",listOfInterfaces[i], ' to vlan 666')
         remoteConnect.send('interface ' + listOfInterfaces[i] + '\n')
         remoteConnect.send('switchport access vlan 666\n')
         remoteConnect.send('do wr\n')
         remoteConnect.send('end\n')
-        remoteConnect.send('exit\n')
 
 # This is the main method, everything that needs to run, should go here
 def mainMethod(host):
@@ -66,6 +65,7 @@ def mainMethod(host):
         intfaces = getInterfaceNames(sshConnect)
         print(intfaces)
         convertInterfaceToVlan(intfaces, sshConnect)
+        remoteConnect.send('exit\n')
 
 #Script Executes Here
 '''
