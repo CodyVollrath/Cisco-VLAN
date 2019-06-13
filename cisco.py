@@ -70,7 +70,6 @@ def mainMethod(host):
 #Script Executes Here
 '''
 We need to look into implementing a massive loop to parse through all of the nodes on the network and implement them into the mainMethod(IP).
-As it stands now, it can only do one host at a time.
 '''
 
 host = ['10.31.252.11', '10.31.252.11', '10.31.252.11']
