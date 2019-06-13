@@ -54,7 +54,7 @@ def mainMethod(host):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-        ssh.connect(host, port=22, username='Vollrathco', password='Xxtriggered_911xX!')
+        ssh.connect(host, port=22, username='username', password='password')
         time.sleep(5)
         print("Connected")
         isConnectionEstablished = True
